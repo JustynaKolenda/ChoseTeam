@@ -1,0 +1,23 @@
+.team {
+    &--groupIncrement {
+        display: flex;
+    }
+
+    &--increment {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 25px;
+        border-radius: 10px;
+    }
+
+    &--decrement {
+        margin-left: 10px;
+        width: 25px;
+        border-radius: 10px;
+    }
+
+    &--stateCounter {
+        position: relative;
+        margin-top: 37px;
+    }
+}
