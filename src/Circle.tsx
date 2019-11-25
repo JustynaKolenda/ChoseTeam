@@ -5,18 +5,16 @@ import { Team } from './Team';
 // const OFFSET = 20
 const radius = 30;
 
-function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+function randomRgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
 }
 
+
 function draw(ctx : any, location:any) {
+    var color = randomRgba();
     ctx.beginPath();
-    ctx.fillStyle = getRandomColor;
+    ctx.fillStyle = color;
     ctx.font = "20px Georgia";
     ctx.lineWidth = 10;
     ctx.arc(location.x, location.y, radius, 0, 2 * Math.PI, false);
